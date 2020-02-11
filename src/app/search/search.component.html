@@ -1,0 +1,6 @@
+<input type="text" (keyup)="onKeyup($event)">
+<button (click)="getUsers()">Search</button>
+<p>{{searchCount}}</p>
+<ol *ngIf="searchResults">
+    <li *ngFor="let user of searchResults.items">{{user.login}}</li>
+</ol>
